@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Welcome Home!</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bs-primary: #6f42c1; /* Bootstrap's default primary color is replaced with purple */
+        }
+        body, html {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8f9fa;
+        }
+        .card {
+            border-radius: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card-body {
+            padding: 2rem;
+        }
+        .welcome-header {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #343a40;
+        }
+        .login-header {
+            font-size: 1.2rem;
+            /* margin-bottom: 2rem; */
+            color: #495057;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h2 class="welcome-header text-primary">Welcome Home!</h2>
+                        <h1h2 class="login-header">Please Log In to Continue</h1h2>
+                        <br />
+                        <br />
+                        <form action="/login" method="post">
+                            <div class="mb-3 text-start">
+                                <label for="username" class="form-label">Username</label>
+                                <input type="text" class="form-control" id="username" name="username" required>
+                            </div>
+                            <div class="mb-3 text-start">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" name="password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Login</button>
+                        </form>
+                        <br />
+                        <p class="mt-4">Having trouble? <a href="#" data-bs-toggle="modal" data-bs-target="#supportModal">Contact support</a></p>
+                        <hr />
+                        <small class="">Mohammdi, Amirhossein &copy;</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Support Modal -->
+    <div class="modal fade" id="supportModal" tabindex="-1" aria-labelledby="supportModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="supportModalLabel">Contact Support</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>You can access this Wireless network only with coorect cerdentioals. If you don't have these cerdentioals, contact with the administrator. <a href="tel:+989192680633">Call Amirhossein Mohamamdi</a>.</p>
+                    <p>Thanks!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="bootstrap.bundle.min.js"></script>
+</body>
+</html>
